@@ -28,8 +28,8 @@ fn main(){
     };
 
     let minresult = (aftertime % 60 + min) % 60;
-    let hourresult = if (min + aftertime) / 60 + hour == 24 {
-        0
+    let hourresult = if (min + aftertime) / 60 + hour > 23 {
+        ((min + aftertime) / 60 + hour) % 24
     }else {
         (min + aftertime) / 60 + hour
     };
