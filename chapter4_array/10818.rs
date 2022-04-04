@@ -9,7 +9,7 @@ fn main(){
 
     let _n = input.trim().parse::<i32>().unwrap();
     let numlist: Vec<i32> = input2.split_whitespace()
-        .map(|s| s.parse().unwrap()).collect();
+        .map(|s| s.parse()).collect();
 
 
     let mut max = -1000000;
